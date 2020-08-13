@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:barcode_scan/barcode_scan.dart';
+
 import 'package:qrreaderapp/src/pages/direcciones_page.dart';
 import 'package:qrreaderapp/src/pages/mapas_page.dart';
 
 
 class HomePage extends StatefulWidget {
-  
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -13,8 +14,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   int currentIndex=0;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +43,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   _scanQR(){
-
-    
 
   }
 
