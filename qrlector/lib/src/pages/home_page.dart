@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:qrreaderapp/src/pages/direcciones_page.dart';
-import 'package:qrreaderapp/src/pages/mapas_page.dart';
+
+import 'direcciones_page.dart';
+import 'mapas_page.dart';
 
 
 class HomePage extends StatefulWidget {
