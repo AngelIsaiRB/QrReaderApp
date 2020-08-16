@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:barcode_scan/barcode_scan.dart';
+
 import 'direcciones_page.dart';
 import 'mapas_page.dart';
 
@@ -44,9 +46,21 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  _scanQR(){
+  _scanQR() async {
+        //https://www.google.com
+        //geo:40.732558,-73.8933331
+    dynamic futureString="";
+    try {
+      futureString= await BarcodeScanner.scan();
 
-    
+    } catch (e) {
+      futureString=e.toString();
+    }
+    print('Future String: ${futureString.rawContent}');
+
+    if(futureString!=null){
+      print("tenemos informacion");
+    }
 
   }
 
