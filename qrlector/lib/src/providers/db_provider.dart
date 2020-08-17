@@ -7,6 +7,7 @@ import 'package:qrlector/src/models/scan_model.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite/sqlite_api.dart';
 import 'package:path/path.dart';
+export 'package:qrlector/src/models/scan_model.dart';
 
 class DBProvider{
 
