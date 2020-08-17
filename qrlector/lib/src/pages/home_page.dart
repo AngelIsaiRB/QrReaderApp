@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:barcode_scan/barcode_scan.dart';
+import 'package:qrlector/src/models/scan_model.dart';
+import 'package:qrlector/src/providers/db_provider.dart';
 
 import 'direcciones_page.dart';
 import 'mapas_page.dart';
@@ -49,7 +51,7 @@ class _HomePageState extends State<HomePage> {
   _scanQR() async {
         //https://www.google.com
         //geo:40.732558,-73.8933331
-    dynamic futureString="";
+    dynamic futureString="https://www.google.com";
     /*
     try {
       futureString= await BarcodeScanner.scan();
@@ -58,11 +60,13 @@ class _HomePageState extends State<HomePage> {
       futureString=e.toString();
     }
     print('Future String: ${futureString.rawContent}');
-
+*/
     if(futureString!=null){
-      print("tenemos informacion");
+      final scan = ScanModel(valor: futureString);
+      DBProvider.db.nuevoScan(scan);
+      
     }
-    */
+    
 
   }
 
