@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
         //https://www.google.com
         //geo:40.732558,-73.8933331
     dynamic futureString="";
+    /*
     try {
       futureString= await BarcodeScanner.scan();
 
@@ -61,6 +62,7 @@ class _HomePageState extends State<HomePage> {
     if(futureString!=null){
       print("tenemos informacion");
     }
+    */
 
   }
 
