@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 
-import 'package:barcode_scan/barcode_scan.dart';
+
 import 'package:qrlector/src/bloc/scans_block.dart';
 import 'package:qrlector/src/models/scan_model.dart';
 import 'package:qrlector/src/utils/utils.dart' as utils;
