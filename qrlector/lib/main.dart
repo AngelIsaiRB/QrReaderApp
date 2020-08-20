@@ -1,6 +1,7 @@
 
   import 'package:flutter/material.dart';
 import 'package:qrlector/src/pages/home_page.dart';
+import 'package:qrlector/src/pages/mapa_page.dart';
    
   void main() => runApp(MyApp());
    
@@ -13,6 +14,7 @@ import 'package:qrlector/src/pages/home_page.dart';
         initialRoute: "home",
         routes: {
             "home" : (BuildContext context)=>HomePage(),
+            "mapa" :(BuildContext context) =>MapaPage()
 
         },
         theme: ThemeData(
