@@ -6,12 +6,12 @@ import 'package:qrlector/src/utils/utils.dart' as utils;
 
 
 class MapasPage extends StatelessWidget {
-
+final scansBloc = ScansBloc();
 
   @override
   Widget build(BuildContext context) {
     
-    final scansBloc = ScansBloc();
+    scansBloc.obtenerScans();
 
 
     return StreamBuilder<List<ScanModel>>(
@@ -35,7 +35,7 @@ class MapasPage extends StatelessWidget {
             ),
             onDismissed: (direccion)=> scansBloc.borrarScan(scans[i].id),
             child: ListTile(
-              leading: Icon(Icons.cloud, color: Colors.pink,),
+              leading: Icon(Icons.navigation, color: Colors.pink,),
               title: Text(scans[i].valor),
               subtitle: Text(scans[i].id.toString()),
               trailing: Icon(Icons.keyboard_arrow_right),

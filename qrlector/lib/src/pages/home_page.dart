@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 
 
@@ -58,26 +59,21 @@ class _HomePageState extends State<HomePage> {
   _scanQR(BuildContext context) async {
         //https://www.google.com
         //geo:40.732558,-73.8933331
-    String futureString="https://www.google.com";
-    /*
+    String  futureString="https://www.google.com";
+    
     try {
-      futureString= await BarcodeScanner.scan();
+       futureString = (await BarcodeScanner.scan()) as String;
 
     } catch (e) {
       futureString=e.toString();
     }
-    print('Future String: ${futureString.rawContent}');7
-*/
+    
+
     if(futureString!=null){
       final scan = ScanModel(valor: futureString);
       
       scansBloc.agregarsacan(scan);
-      
-
-      final scan2 = ScanModel(valor: "geo:40.732558,-73.8933331");      
-      scansBloc.agregarsacan(scan2);
-
-
+        
       if (Platform.isIOS) {
         Future.delayed(Duration(milliseconds:750),(){
           utils.abrirScan(context,scan);
